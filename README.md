@@ -11,3 +11,12 @@ You can easily run the workflow using:
 3. Fabric-like patterns
 
  
+1. use "poetry" to install env
+```
+poetry install
+```
+2. 
+
+```
+poetry run streamlit run app_web.py
+```
