@@ -1,0 +1,37 @@
+strategies:
+- input_format: '{{text}}'
+  model: openrouter/anthropic/claude-3.5-sonnet
+  output_name: outline
+  prompt_name: outliner_wsy
+- input_format: 'original text:
+
+    {{text}}
+
+    outline:
+
+    {{outline}}
+
+    '
+  model: openrouter/openai/gpt-4o-mini
+  output_name: draft_filled
+  prompt_name: fill_draft_with_material
+- input_format: 'original text:
+
+    {{text}}
+
+    outline:
+
+    {{outline}}
+
+    draft:
+
+    {{draft_filled}}
+
+    style_example:
+
+    {{memory_blog_example}}
+
+    '
+  model: openrouter/anthropic/claude-3.5-sonnet
+  output_name: tech_note_draft
+  prompt_name: write_wsy_note

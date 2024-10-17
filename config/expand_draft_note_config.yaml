@@ -1,0 +1,33 @@
+strategies:
+- input_format: 'original text:
+
+    {{text}}
+
+    '
+  model: openai/gpt-4o-mini
+  output_name: reflection
+  prompt_name: comment_cn_draft
+- input_format: 'original text:
+
+    {{text}}
+
+    comments:
+
+    {{reflection}}
+
+    style reference:
+
+    {{memory_blog_example}}
+
+    '
+  model: openai/gpt-4o-mini
+  output_name: improvement
+  prompt_name: improve_md_writing_based_comments_wsy_cn
+- input_format: 'original text:
+
+    {{improvement}}
+
+    '
+  model: openai/gpt-4o-mini
+  output_name: chinese_punctuation_checked
+  prompt_name: check_chinese_punctuation

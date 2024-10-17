@@ -1,0 +1,9 @@
+strategies:
+- input_format: 'original text:
+
+    {{text}}
+
+    '
+  model: openai/gpt-4o-mini
+  output_name: formatted_md
+  prompt_name: format_md

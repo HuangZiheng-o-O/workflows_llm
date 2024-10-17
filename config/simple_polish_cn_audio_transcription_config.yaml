@@ -1,0 +1,13 @@
+strategies:
+- input_format: 'original text:
+
+    {{text}}
+
+    vocabulary:
+
+    {{memory_vocab}}
+
+    '
+  model: openai/gpt-4o
+  output_name: reflection
+  prompt_name: simple_improve_audio_transcription_cn

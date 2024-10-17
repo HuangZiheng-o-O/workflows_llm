@@ -1,0 +1,33 @@
+strategies:
+- input_format: 'original text:
+
+    {{text}}
+
+    paper example:
+
+    {{memory_cn_paper_example}}
+
+    '
+  model: openrouter/anthropic/claude-3.5-sonnet
+  output_name: reflection
+  prompt_name: comment_cn_academic
+- input_format: 'original text:
+
+    {{text}}
+
+    comments:
+
+    {{reflection}}
+
+    '
+  model: openrouter/anthropic/claude-3.5-sonnet
+  output_name: improvement
+  prompt_name: improve_academic_cn
+- input_format: 'original text:
+
+    {{improvement}}
+
+    '
+  model: openrouter/openai/gpt-4o-mini
+  output_name: chinese_punctuation_checked
+  prompt_name: check_chinese_paper_punctuation

@@ -1,0 +1,14 @@
+strategies:
+  - tool_name: exa_search
+    tool_params:
+      category: research paper
+    input_format: "{{text}}"
+    output_name: exa_result
+  - model: openai/gpt-4o-mini
+    prompt_name: beta_material_to_literature_review
+    input_format: |
+      user input text:
+      {{exa_result}}
+      cn paper example:
+      {{memory_cn_paper_example}}
+    output_name: literature_review_draft

@@ -1,0 +1,14 @@
+parameters:
+  tokens: 4000  
+
+strategies:
+  - model: openai/gpt-4o-mini
+    prompt_name: beta_polish_and_blog
+    input_format: |
+      user input text:
+      {{text}}
+      vocab:
+      {{memory_vocab}}
+      blog style example:
+      {{memory_blog_example}}
+    output_name: improvement
